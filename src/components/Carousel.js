@@ -1,18 +1,22 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import useApi from "../Api/useApi";
+import uuid from "react-uuid";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-//import "./styles.css";
+//import img from "../assets/groupe/"
 
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 export default function Carousel() {
+	const datas = useApi();
+	console.log(datas);
+
 	return (
 		<>
 			<div className="carousel w-full h-screen flex items-start">
@@ -36,57 +40,18 @@ export default function Carousel() {
 					modules={[EffectCoverflow, Pagination, Navigation]}
 					className="mySwiper w-2/3 h-2/3"
 				>
-					<SwiperSlide className="bg-center bg-cover w-80 h-80">
-						<img
-							className="w-full flex items-center"
-							src="https://swiperjs.com/demos/images/nature-1.jpg"
-							alt=""
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="bg-center bg-cover	w-80 h-80">
-						<img
-							className="w-full block"
-							src="https://swiperjs.com/demos/images/nature-2.jpg"
-							alt=""
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="bg-center bg-cover	w-80 h-80">
-						<img
-							className="w-full block"
-							src="https://swiperjs.com/demos/images/nature-3.jpg"
-							alt=""
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="bg-center bg-cover	w-80 h-80">
-						<img
-							className="w-full block"
-							src="https://swiperjs.com/demos/images/nature-4.jpg"
-							alt=""
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="bg-center bg-cover	w-80 h-80">
-						<img
-							className="w-full block"
-							src="https://swiperjs.com/demos/images/nature-5.jpg"
-							alt=""
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="bg-center bg-cover	w-80 h-80">
-						<img
-							className="w-full block"
-							src="https://swiperjs.com/demos/images/nature-6.jpg"
-							alt=""
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="" />
-					</SwiperSlide>
-					<SwiperSlide className="bg-center bg-cover	w-80 -80">
-						<img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="" />
-					</SwiperSlide>
-					<SwiperSlide className="bg-center bg-cover	w-80 -80">
-						<img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="" />
-					</SwiperSlide>
+					{datas && (
+						datas?.map((elt) => (
+							<SwiperSlide key={uuid()} className="bg-center bg-cover w-80 h-80">
+								<img
+									className="w-full flex items-center"
+									
+									src={`../../assets/groupe/${elt?.href}`}
+									alt={elt?.titre}
+								/>
+							</SwiperSlide>
+						)))}
+					
 				</Swiper>
 			</div>
 		</>
