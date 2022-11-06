@@ -1,11 +1,11 @@
 //import { Fragment } from "react";
-import logo from "../assets/logo.png";
+import logoWhite from "../assets/logoWhite.svg";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-	{ name: "Accueil", href: "/", current: true },
+	{ name: "Accueil", href: "/homeboard", current: true },
 	{ name: "Le groupe", href: "/groupe", current: false },
 	{ name: "Les musiciens", href: "/musiciens", current: false },
 	{ name: "Evènements", href: "/evenements", current: false },
@@ -22,8 +22,8 @@ export default function Example() {
 			{({ open }) => (
 				<>
 					<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
-						<div className="relative flex h-16 items-center justify-between">
-							<div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+						<div className=" flex h-16 items-center justify-between relative">
+							<div className=" inset-y-0 left-0 flex items-center md:hidden">
 								{/* Mobile menu button*/}
 								<Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-red-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 									<span className="sr-only">Open main menu</span>
@@ -37,13 +37,8 @@ export default function Example() {
 							<div className="flex flex-1 items-center justify-center md:items-stretch md:justify-center ">
 								<div className="flex flex-shrink-0 items-center">
 									<img
-										className="block h-8 w-auto md:hidden"
-										src={logo}
-										alt="Your Company"
-									/>
-									<img
-										className="hidden h-8 w-auto md:block"
-										src={logo}
+										className="block h-12 md:hidden  w-15"
+										src={logoWhite}
 										alt="Your Company"
 									/>
 								</div>
@@ -55,8 +50,8 @@ export default function Example() {
 												to={item.href}
 												className={({ isActive }) =>
 													isActive
-														? "bg-gray-700 text-white flex items-center text-xl p-2"
-														: "text-red-700 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-xl font-medium"
+														? "bg-gray-700 text-white flex items-center text-xl p-2	"
+														: "text-red-700 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-xl font-medium flex items-center text-center"
 												}
 												aria-current={item.current ? "page" : undefined}
 												end
@@ -68,9 +63,14 @@ export default function Example() {
 								</div>
 							</div>
 						</div>
+						<img
+							src={logoWhite}
+							alt=""
+							className="hidden absolute w-32 md:block md:left-5 md:top-5"
+						/>
 					</div>
 
-					<Disclosure.Panel className="sm:hidden">
+					<Disclosure.Panel className="md:hidden  ">
 						<div className="space-y-1 px-2 pt-2 pb-3">
 							{navigation.map((item) => (
 								<Disclosure.Button

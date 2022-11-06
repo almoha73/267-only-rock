@@ -1,59 +1,59 @@
+import { useSelector, useDispatch } from "react-redux";
+import { getSlides } from "../redux/slide/slideReducer";
+import { useEffect } from "react";
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import useApi from "../Api/useApi";
-import uuid from "react-uuid";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-//import img from "../assets/groupe/"
 
 // import required modules
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { Mousewheel, Pagination } from "swiper";
 
-export default function Carousel() {
-	const datas = useApi();
-	console.log(datas);
+const Carousel = () => {
+	const { slides } = useSelector((state) => ({
+		...state.slideReducer,
+	}));
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getSlides());
+	}, [dispatch]);
+
+	console.log(slides[0]?.image);
 
 	return (
 		<>
-			<div className="carousel w-full h-screen flex items-start">
+			<div className="w-full h-80  md:h-screen slide-container flex justify-center items-start ">
 				<Swiper
-					effect={"coverflow"}
-					grabCursor={true}
-					navigation={true}
-					loop={true}
-					centeredSlides={true}
-					slidesPerView={"auto"}
-					coverflowEffect={{
-						rotate: 50,
-						stretch: 0,
-						depth: 100,
-						modifier: 1,
-						slideShadows: true,
-					}}
+					direction={"vertical"}
+					slidesPerView={1}
+					spaceBetween={30}
+					mousewheel={true}
 					pagination={{
 						clickable: true,
 					}}
-					modules={[EffectCoverflow, Pagination, Navigation]}
-					className="mySwiper w-2/3 h-2/3"
+					modules={[Mousewheel, Pagination]}
+					className="mySwiper h-full rounded-xl w-80 md:w-3/5 md:h-3/5"
 				>
-					{datas && (
-						datas?.map((elt) => (
-							<SwiperSlide key={uuid()} className="bg-center bg-cover w-80 h-80">
-								<img
-									className="w-full flex items-center"
-									
-									src={`../../assets/groupe/${elt?.href}`}
-									alt={elt?.titre}
-								/>
-							</SwiperSlide>
-						)))}
-					
+					{slides.map((elt, index) => (
+						<SwiperSlide
+							key={index}
+							className="text-center text-lg bg-white flex justify-center items-center"
+						>
+							<img
+								src={`../assets/groupe/${elt.image}`}
+								alt=""
+								className="object-cover w-full h-full"
+							/>
+						</SwiperSlide>
+					))}
 				</Swiper>
 			</div>
 		</>
 	);
-}
+};
+
+export default Carousel;
