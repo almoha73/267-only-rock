@@ -1,6 +1,6 @@
 import React from "react";
-
 import logosansFond from "../assets/logosansFond.svg";
+
 const Home = () => {
 	return (
 		<>

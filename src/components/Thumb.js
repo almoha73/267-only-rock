@@ -1,25 +1,11 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { getMusiciens } from "../redux/musiciens/musiciensReducer";
 import { v4 as uuidv4 } from "uuid";
 
 import React from "react";
 
 const Thumb = ({ key }) => {
-	const { musiciens } = useSelector((state) => ({
-		...state.musiciensReducer,
-	}));
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch(getMusiciens());
-	}, [dispatch]);
-
-	console.log(musiciens);
-
 	return (
 		<>
-			{musiciens?.map((elt) => (
+			{/* {musiciens?.map((elt) => (
 				<>
 					<div
 						key={(key = uuidv4())}
@@ -57,7 +43,7 @@ const Thumb = ({ key }) => {
 						</div>
 					</div>
 				</>
-			))}
+			))} */}
 		</>
 	);
 };
