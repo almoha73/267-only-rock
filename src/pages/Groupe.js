@@ -31,7 +31,7 @@ const Groupe = () => {
 					alt=""
 					className="block w-2/3 mx-auto  mb-6"
 				/>
-				<div className="w-10/12 mx-auto leading-7">
+				<div className="w-10/12 mx-auto leading-7 text-lg">
 					<img src={logoWhite} alt="" className="w-20 float-left" />
 					<p className="text-white tracking-wide indent-8 mb-2">
 						est un groupe de rock créé fin 2015 par Laurent (chant), Ricardo
