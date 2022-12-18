@@ -9,7 +9,6 @@ const navigation = [
 	{ name: "Le groupe", href: "/groupe", current: false },
 	{ name: "Les musiciens", href: "/musiciens", current: false },
 	{ name: "Evènements", href: "/evenements", current: false },
-	{ name: "Contact", href: "/contact", current: false },
 ];
 
 function classNames(...classNamees) {
@@ -74,13 +73,19 @@ export default function Example() {
 													</svg>
 												</span>
 											</button>
-											<ul className="bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white">
-												<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+											<ul className="flex flex-col bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white">
+												<NavLink
+													to="/photos"
+													className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
+												>
 													Photos
-												</li>
-												<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+												</NavLink>
+												<NavLink
+													to="/videos"
+													className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
+												>
 													Vidéos
-												</li>
+												</NavLink>
 											</ul>
 										</div>
 									</div>
@@ -126,12 +131,18 @@ export default function Example() {
 									</span>
 								</button>
 								<ul className="bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white">
-									<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+									<NavLink
+										to="/photos"
+										className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
+									>
 										Photos
-									</li>
-									<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+									</NavLink>
+									<NavLink
+										to="/videos"
+										className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
+									>
 										Vidéos
-									</li>
+									</NavLink>
 								</ul>
 							</div>
 						</div>

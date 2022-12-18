@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Navbar from "../components/Navbar";
-import Carousel from "../components/Carousel";
+import CarouselGroupe from "../components/CarouselGroupe";
 import Footer from "../components/Footer";
 import { ImageContext } from "../context/imagesContext";
 import { useContext } from "react";
@@ -9,9 +9,7 @@ import logoWhite from "../assets/logoWhite.svg";
 import logosansFond from "../assets/logosansFond.svg";
 
 const Groupe = () => {
-	const { groupe } = useContext(ImageContext);
-	console.log(groupe);
-
+	const { slides, groupe } = useContext(ImageContext);
 	return (
 		<div className="w-full h-auto flex flex-col">
 			<Navbar />
@@ -81,7 +79,7 @@ const Groupe = () => {
 					</p>
 				</div>
 
-				<Carousel />
+				<CarouselGroupe />
 			</main>
 			<Footer />
 		</div>
