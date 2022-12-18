@@ -4,11 +4,9 @@ import Footer from "../components/Footer";
 
 const Musiciens = () => {
 	return (
-		<div className="w-full h-auto ">
+		<div className="w-full h-auto flex flex-col">
 			<Navbar />
-			<main className="w-full md:h-auto flex-1 flex justify-start	 items-center flex-col">
-				{/* <Thumb /> */}
-			</main>
+			<main className="w-full mt-32 md:h-auto flex-1 flex items-center flex-col"></main>
 			<Footer />
 		</div>
 	);

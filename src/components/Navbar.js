@@ -12,8 +12,8 @@ const navigation = [
 	{ name: "Contact", href: "/contact", current: false },
 ];
 
-function classNames(...classes) {
-	return classes.filter(Boolean).join(" ");
+function classNames(...classNamees) {
+	return classNamees.filter(Boolean).join(" ");
 }
 
 export default function Example() {
@@ -43,7 +43,7 @@ export default function Example() {
 									/>
 								</div>
 								<div className="hidden md:ml-28 md:block">
-									<div className="flex space-x-8">
+									<div className="flex space-x-8 items-center">
 										{navigation.map((item) => (
 											<NavLink
 												key={item.name}
@@ -59,6 +59,30 @@ export default function Example() {
 												{item.name}
 											</NavLink>
 										))}
+										<div className="group inline-block">
+											<button className="outline-none focus:outline-none bg-gray-800 rounded-sm flex items-center min-w-32 hover:bg-gray-700 hover:text-white">
+												<span className="pr-1 text-red-700 text-xl flex-1">
+													Médias
+												</span>
+												<span>
+													<svg
+														className="fill-red-500 h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 20 20"
+													>
+														<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+													</svg>
+												</span>
+											</button>
+											<ul className="bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white">
+												<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+													Photos
+												</li>
+												<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+													Vidéos
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -88,6 +112,28 @@ export default function Example() {
 									{item.name}
 								</Disclosure.Button>
 							))}
+							<div className="group inline-block">
+								<button className="outline-none focus:outline-none bg-gray-800 rounded-sm flex items-center min-w-32 hover:bg-gray-700 hover:text-white flex justify-between p-3">
+									<span className="pr-1 text-red-700 text-base">Médias</span>
+									<span>
+										<svg
+											className="fill-white h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 20 20"
+										>
+											<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+										</svg>
+									</span>
+								</button>
+								<ul className="bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white">
+									<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+										Photos
+									</li>
+									<li className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700">
+										Vidéos
+									</li>
+								</ul>
+							</div>
 						</div>
 					</Disclosure.Panel>
 				</>

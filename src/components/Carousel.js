@@ -2,12 +2,13 @@ import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Zoom, FreeMode, Navigation, Thumbs } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import "swiper/css/zoom";
 // Context
 import { ImageContext } from "../context/imagesContext";
 import { useContext } from "react";
@@ -25,12 +26,13 @@ const Carousel = () => {
 					"--swiper-pagination-color": "#fff",
 				}}
 				loop={true}
+				zoom={true}
 				autoHeight={true}
 				spaceBetween={10}
 				navigation={true}
 				thumbs={{ swiper: thumbsSwiper }}
-				modules={[FreeMode, Navigation, Thumbs]}
-				className="mySwiper w-11/12 sm:w-1/3 rounded-lg border-red-600 border-4 mb-2"
+				modules={[Zoom, FreeMode, Navigation, Thumbs]}
+				className="mySwiper w-11/12 sm:w-1/3 rounded-lg border-red-600 border-2 mb-2"
 			>
 				{slides.map((elt) => (
 					<SwiperSlide key={elt.id}>
