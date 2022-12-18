@@ -14,20 +14,11 @@
 body {
 	background-image: url("./assets/bg_2.jpg");
 }
-nav {
+nav,
+.title-group {
 	font-family: "Anton", sans-serif;
 }
 
-/* .swiper-button-next::after,
-.swiper-button-prev::after {
-	color: azure;
-}
-
-.swiper-pagination-bullet-active {
-	background-color: #ffff !important;
-	width: 12px !important;
-	height: 12px !important;
-} */
 .btn-home a:hover {
 	color: #ffff;
 	background: #ff0000;

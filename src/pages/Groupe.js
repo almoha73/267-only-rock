@@ -2,23 +2,30 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
+import Footer from "../components/Footer";
 import { ImageContext } from "../context/imagesContext";
 import { useContext } from "react";
 import logoWhite from "../assets/logoWhite.svg";
+import logosansFond from "../assets/logosansFond.svg";
 
 const Groupe = () => {
 	const { groupe } = useContext(ImageContext);
 	console.log(groupe);
 
 	return (
-		<div className="w-full h-screen flex flex-col">
+		<div className="w-full h-auto flex flex-col">
 			<Navbar />
-			<main className="flex-1 my-8 w-full">
-				<h1 className="text-red-600 text-5xl text-center mb-6">
-					Le groupe 267
-				</h1>
+			<main className="flex-1 h-auto  w-full  mt-32">
+				<div className="w-full flex items-center justify-center mb-8">
+					<span className="w-20 block mr-2">
+						<img src={logosansFond} alt="" className="w-full" />
+					</span>
+					<h1 className="title-group text-red-600 text-4xl text-center">
+						Le groupe
+					</h1>
+				</div>
 
-				<ul className="flex gap-4 text-white text-2xl justify-center mb-6">
+				<ul className="flex w-11/12 mx-auto flex-wrap gap-4 text-white text-lg sm:text-2xl  justify-center sm:justify-center mb-6">
 					<li>ZZ Top</li>
 					<li>Creed Dance</li>
 					<li>Beatles</li>
@@ -26,13 +33,16 @@ const Groupe = () => {
 					<li>Billy Idol</li>
 					<li>...</li>
 				</ul>
-				<img
-					src={groupe[0]?.href}
-					alt=""
-					className="block w-2/3 mx-auto  mb-6"
-				/>
-				<div className="w-10/12 mx-auto leading-7 text-lg">
-					<img src={logoWhite} alt="" className="w-20 float-left" />
+				<div className="w-11/12  flex justify-center items-center mx-auto">
+					<img
+						src={groupe[0]?.href}
+						alt=""
+						className=" mx-auto border-white border mb-6  w-full sm:w-1/3"
+					/>
+				</div>
+
+				<div className="w-10/12 mx-auto leading-7 text-lg sm:text-xl sm:leading-8 text-justify">
+					<img src={logoWhite} alt="" className=" w-20 float-left" />
 					<p className="text-white tracking-wide indent-8 mb-2">
 						est un groupe de rock créé fin 2015 par Laurent (chant), Ricardo
 						(guitare rythmique) Bob (basse), Pat (guitare solo).
@@ -73,6 +83,7 @@ const Groupe = () => {
 
 				<Carousel />
 			</main>
+			<Footer />
 		</div>
 	);
 };
