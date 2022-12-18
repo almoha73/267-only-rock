@@ -30,7 +30,7 @@ const CarouselGallery = () => {
 				navigation={true}
 				thumbs={{ swiper: thumbsSwiper }}
 				modules={[Zoom, FreeMode, Navigation, Thumbs]}
-				className="mySwiper w-11/12 max-h-[800px] sm:w-1/2 rounded-lg border-red-600 border-2 mb-2"
+				className="mySwiper w-11/12 max-h-[850px] sm:w-1/2 rounded-lg border-red-600 border-2 mb-2"
 			>
 				{photos.map((elt) => (
 					<SwiperSlide key={elt.id}>

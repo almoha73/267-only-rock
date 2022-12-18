@@ -9,7 +9,7 @@ import logoWhite from "../assets/logoWhite.svg";
 import logosansFond from "../assets/logosansFond.svg";
 
 const Groupe = () => {
-	const { slides, groupe } = useContext(ImageContext);
+	const { groupe } = useContext(ImageContext);
 	return (
 		<div className="w-full h-auto flex flex-col">
 			<Navbar />
