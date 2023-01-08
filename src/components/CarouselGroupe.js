@@ -1,18 +1,16 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Zoom, FreeMode, Navigation } from "swiper";
+import { FreeMode, Navigation } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/zoom";
-import { ImageContext } from "../context/imagesContext";
-import { useContext } from "react";
 
-const CarouselGroupe = () => {
-	const { slides } = useContext(ImageContext);
+const CarouselGroupe = ({ slides }) => {
+	console.log(slides);
 	return (
 		<>
 			<Swiper
@@ -24,12 +22,16 @@ const CarouselGroupe = () => {
 				autoHeight={true}
 				spaceBetween={10}
 				navigation={true}
-				modules={[Zoom, FreeMode, Navigation]}
-				className="mySwiper w-11/12 sm:w-1/3 rounded-lg border-red-600 border-2 mb-2"
+				modules={[FreeMode, Navigation]}
+				className="mySwiper w-[300px] h-auto min-h-[278px] sm:w-1/3 sm:h-auto rounded-lg shadow-lg shadow-white mb-2"
 			>
-				{slides.map((elt) => (
-					<SwiperSlide key={elt.id}>
-						<img className="rounded-lg block " src={elt?.href} alt="" />
+				{slides?.map((elt) => (
+					<SwiperSlide key={elt?.key}>
+						<img
+							className="rounded-lg  h-full w-full"
+							src={elt?.slides?.photo}
+							alt="groupe"
+						/>
 					</SwiperSlide>
 				))}
 			</Swiper>

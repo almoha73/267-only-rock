@@ -1,21 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import "swiper/css/zoom";
-import CarouselGallery from "../../components/CarouselGallery";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Card from "../../components/Card";
+import { getGallery } from "../../utils/fetchPhotos";
+import { useState } from "react";
 
 const Photos = () => {
+	const [gallery, setGallery] = useState([]);
+	const [loading, setLoading] = useState(true);
+	useEffect(() => {
+		const loadData = async () => {
+			setLoading(true);
+			const result = [];
+			const data = await getGallery();
+			await data.forEach((query) =>
+				result.push({ key: query.id, gallery: query.data() })
+			);
+			setGallery(result);
+		};
+		loadData();
+		setLoading(false);
+	}, [gallery.length]);
+
+	console.log(gallery);
+
 	return (
 		<>
-			<div className="flex flex-col w-Full h-auto">
+			<div className="flex flex-col w-Full h-auto bg-gray-800">
 				<Navbar />
-				<main className="flex-1 w-full flex flex-col lg:flex-row items-center justify-center mt-40">
-					<CarouselGallery />
+				<main className="flex-1 w-full flex flex-col items-center justify-center mt-40">
+					<h1 className="text-4xl text-red-600 underline mb-12">
+						Gallerie photos
+					</h1>
+					{loading ? (
+						<>...Loading</>
+					) : (
+						<div className="w-11/12 sm:columns-2 lg:columns-3 xl:columns-4">
+							{gallery && gallery?.map((elt) => <Card gallery={elt} />)}
+						</div>
+					)}
 				</main>
 				<Footer />
 			</div>
