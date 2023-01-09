@@ -19,7 +19,6 @@ const Card = ({ gallery }) => {
 			}
 		>
 			<img
-				key={gallery.key}
 				src={gallery?.gallery?.photo}
 				alt=""
 				className="w-full  sm:w-80 mb-8 rounded-lg shadow-md shadow-white "

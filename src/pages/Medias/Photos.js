@@ -36,8 +36,11 @@ const Photos = () => {
 					{loading ? (
 						<>...Loading</>
 					) : (
-						<div className="w-11/12 sm:columns-2 lg:columns-3 xl:columns-4">
-							{gallery && gallery?.map((elt) => <Card gallery={elt} />)}
+						<div className="w-11/12 sm:w-10/12 flex justify-center">
+							<div className="sm:ml-1/12 sm:columns-2 lg:columns-3 xl:columns-4 sm:gap-8">
+								{gallery &&
+									gallery?.map((elt) => <Card gallery={elt} key={elt.key} />)}
+							</div>
 						</div>
 					)}
 				</main>
