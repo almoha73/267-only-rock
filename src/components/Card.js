@@ -14,7 +14,7 @@ const Card = ({ gallery }) => {
 			onClick={toggleClass}
 			className={
 				toggleBig
-					? "block w-full lg:scale-[2] lg:cursor-pointer"
+					? "block w-full lg:scale-[1.6] lg:cursor-pointer"
 					: "block w-full aspect-auto lg:cursor-pointer"
 			}
 		>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import CarouselGroupe from "../components/CarouselGroupe";
+//import CarouselGroupe from "../components/CarouselGroupe";
 import Footer from "../components/Footer";
 import logoWhite from "../assets/logoWhite.svg";
 import logosansFond from "../assets/logosansFond.svg";
@@ -127,7 +127,7 @@ const Groupe = () => {
 							des festivals, bar, salon.
 						</p>
 					</div>
-					<CarouselGroupe slides={slides} />
+					{/* <CarouselGroupe slides={slides} /> */}
 				</main>
 				<Footer />
 			</div>
