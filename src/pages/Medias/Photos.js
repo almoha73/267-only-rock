@@ -30,7 +30,7 @@ const Photos = () => {
 			<div className="flex flex-col w-Full h-auto bg-gray-800">
 				<Navbar />
 				<main className="flex-1 w-full flex flex-col items-center justify-center mt-40">
-					<h1 className="text-4xl text-red-600 underline mb-12">
+					<h1 className="galleryTitle text-4xl text-red-600 underline mb-12">
 						Gallerie photos
 					</h1>
 					{loading ? (

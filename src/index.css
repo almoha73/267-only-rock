@@ -15,7 +15,7 @@ body {
 	background-image: url("./assets/bg_2.jpg");
 }
 nav,
-.title-group {
+.title-group, .galleryTitle {
 	font-family: "Anton", sans-serif;
 }
 
@@ -25,6 +25,27 @@ nav,
 	box-shadow: 0 0 50px #ff0000;
 }
 
+.groupeImg{
+	shape-outside: margin-box;
+	border-radius: 35%;
+	/* margin: 0 20px 5px 0; */
+	
+}
+
+@media screen and (max-width: 600px) { 
+	.groupeImg{
+		
+		border-radius: 5px;
+		/* margin-bottom: 20px; */
+		
+	}
+ }
+
+.groupeLogo{
+	shape-outside: margin-box;
+	border-radius: 50%;
+	margin: 0 5px 0px 0;
+}
 /* since nested groupes are not supported we have to use 
      regular css for the nested dropdowns 
   */
