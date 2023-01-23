@@ -8,24 +8,8 @@ import logosansFond from "../assets/logosansFond.svg";
 import { getPhotoGroupe, getSlides } from "../utils/fetchPhotos";
 
 const Groupe = () => {
-	const [slides, setSlides] = useState([]);
+	
 	const [groupe, setGroupe] = useState([]);
-
-	useEffect(() => {
-		const loadData = async () => {
-			const result = [];
-
-			const data = await getSlides();
-
-			console.log(data);
-			await data.forEach((query) =>
-				result.push({ key: query.id, slides: query.data() })
-			);
-
-			setSlides(result);
-		};
-		loadData();
-	}, [slides.length, groupe.length]);
 
 	useEffect(() => {
 		const loadData = async () => {
@@ -39,7 +23,7 @@ const Groupe = () => {
 		loadData();
 	}, [groupe.length]);
 
-	console.log(slides, groupe);
+	console.log(groupe);
 	return (
 		<>
 			<div className="w-full h-auto flex flex-col">
