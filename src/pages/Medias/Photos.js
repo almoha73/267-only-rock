@@ -27,16 +27,19 @@ const Photos = () => {
 
 	return (
 		<>
-			<div className="flex flex-col w-Full h-auto bg-gray-800">
+			<div
+				className="flex flex-col w-Full h-auto "
+				// style={{ backgroundImage: `url(${bg})` }}
+			>
 				<Navbar />
-				<main className="flex-1 w-full flex flex-col items-center justify-center mt-40">
-					<h1 className="text-4xl text-red-600 underline mb-12">
+				<main className="flex-1 w-full flex flex-col items-center justify-center sm:mt-40 mt-32">
+					<h1 className="galleryTitle text-4xl text-red-600 underline mb-12">
 						Gallerie photos
 					</h1>
 					{loading ? (
 						<>...Loading</>
 					) : (
-						<div className="w-11/12 sm:w-10/12 flex justify-center">
+						<div className=" sm:w-10/12 flex justify-center bg-neutral-800 sm:py-16 p-4">
 							<div className="sm:ml-1/12 sm:columns-2 lg:columns-3 xl:columns-4 sm:gap-8">
 								{gallery &&
 									gallery?.map((elt) => <Card gallery={elt} key={elt.key} />)}

@@ -13,11 +13,10 @@
 }
 body {
 	background-image: url("./assets/bg_2.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 nav,
-.title-group {
+.title-group,
+.galleryTitle {
 	font-family: "Anton", sans-serif;
 }
 
