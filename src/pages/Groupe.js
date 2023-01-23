@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import logoWhite from "../assets/logoWhite.svg";
 import logosansFond from "../assets/logosansFond.svg";
 
-import { getPhotoGroupe, getSlides } from "../utils/fetchPhotos";
+import { getPhotoGroupe} from "../utils/fetchPhotos";
 
 const Groupe = () => {
 	
