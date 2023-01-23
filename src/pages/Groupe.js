@@ -46,7 +46,7 @@ const Groupe = () => {
 						<li>Billy Idol</li>
 						<li>...</li>
 					</ul>
-					<div className="w-10/12 mx-auto my-8">
+					<div className="sm:w-10/12 mx-auto my-8 bg-neutral-800 p-3 sm:p-5 rounded">
 						<img
 							src={groupe[0]?.photoGroupe?.photo}
 							alt="groupe"
