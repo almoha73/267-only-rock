@@ -1,29 +1,26 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
+import Modal from "./Modal";
 
 const Card = ({ gallery }) => {
-	const [toggleBig, setToggleBig] = useState(false);
-	const toggleClass = (e) => {
-		const choice = e.target;
-		console.log(choice);
-		setToggleBig(!toggleBig);
+	const [open, setOpen] = useState(false);
+	const [img, setImg] = useState("");
+	const toggleModal = (e) => {
+		console.log(e, e.target);
+		setImg(e.target.currentSrc);
+		setOpen(true);
 	};
 	return (
-		<Link
-			to="#"
-			onClick={toggleClass}
-			className={
-				toggleBig
-					? "block w-full lg:scale-[1.6] lg:cursor-pointer"
-					: "block w-full aspect-auto lg:cursor-pointer"
-			}
-		>
-			<img
-				src={gallery?.gallery?.photo}
-				alt=""
-				className="w-full  sm:w-80 mb-8 rounded-lg shadow-md shadow-white "
-			/>
-		</Link>
+		<>
+			{open && <Modal img={img} setIsOpen={setOpen} />}
+			<div onClick={toggleModal} className={"block w-full cursor-pointer"}>
+				<img
+					src={gallery?.gallery?.photo}
+					alt=""
+					className="w-full  sm:w-80 mb-8 rounded-lg shadow-md shadow-white "
+				/>
+			</div>
+		</>
 	);
 };
 

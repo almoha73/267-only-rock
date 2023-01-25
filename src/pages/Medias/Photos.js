@@ -11,7 +11,6 @@ const Photos = () => {
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		const loadData = async () => {
-			setLoading(true);
 			const result = [];
 			const data = await getGallery();
 			await data.forEach((query) =>
