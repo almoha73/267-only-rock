@@ -1,10 +1,13 @@
 import React from "react";
 import logosansFond from "../assets/logosansFond.svg";
-
+import bg from "../assets/bg_2.jpg";
 const Home = () => {
 	return (
 		<>
-			<div className="w-full h-screen sm:h-auto flex flex-col justify-center items-center">
+			<div
+				className="w-full h-screen  flex flex-col justify-center items-center"
+				style={{ backgroundImage: `url(${bg})` }}
+			>
 				<div className="mb-20 max-w-[700px]">
 					<img src={logosansFond} alt="" className="" />
 				</div>

@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import logoWhite from "../assets/logoWhite.svg";
 import logosansFond from "../assets/logosansFond.svg";
-
+import bg from "../assets/bg_2.jpg";
 import { getPhotoGroupe } from "../utils/fetchPhotos";
 
 const Groupe = () => {
@@ -26,7 +26,7 @@ const Groupe = () => {
 		<>
 			<div
 				className="w-full h-auto flex flex-col"
-				// style={{ backgroundImage: `url(${bg})` }}
+				style={{ backgroundImage: `url(${bg})` }}
 			>
 				<Navbar />
 				<main className="flex-1 h-auto  flex  flex-col w-full mt-24 sm:mt-32 ">

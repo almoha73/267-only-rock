@@ -11,9 +11,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body {
+/* body {
 	background-image: url("./assets/bg_2.jpg");
-}
+} */
 nav,
 .title-group,
 .galleryTitle {
