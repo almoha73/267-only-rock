@@ -168,7 +168,7 @@ export default function Contact() {
                         className="h-6 w-6 flex-shrink-0 text-red-200"
                         aria-hidden="true"
                       />
-                      <span className="ml-3">0658136651</span>
+                      <span className="ml-3">06 58 13 66 51</span>
                     </dd>
                     <dt>
                       <span className="sr-only">Email</span>
