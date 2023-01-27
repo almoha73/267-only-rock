@@ -16,7 +16,7 @@
 } */
 nav,
 .title-group,
-.galleryTitle {
+.galleryTitle, .musiciensTitle, .teaserTitle {
 	font-family: "Anton", sans-serif;
 }
 
