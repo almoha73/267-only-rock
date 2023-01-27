@@ -28,7 +28,7 @@ const Musiciens = () => {
     >
       <Navbar />
       <main className="w-full mt-24 xl:mt-32 md:h-auto flex-1 flex items-center flex-col">
-        <h1 className="musiciensTitle text-red-600 text-2xl lg:text-4xl mb-8">
+        <h1 className="musiciensTitle text-red-600 text-2xl lg:text-4xl sm:mt-8 xl:mt-0">
           Les musiciens
         </h1>
         <div className=" sm:w-11/12 py-8">
