@@ -46,7 +46,7 @@ export default function Contact() {
           <section className="" aria-labelledby="contact-heading">
             <div className=" mx-auto max-w-7xl px-6 lg:px-8 shadow-xl">
               <h2 id="contact-heading" className="sr-only">
-                Contactez-moi
+                Contactez-nous
               </h2>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 mt-8">
