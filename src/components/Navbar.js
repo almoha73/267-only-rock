@@ -114,24 +114,22 @@ export default function Navbar() {
           <Disclosure.Panel className="md:hidden  ">
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigation.map((item) => (
-                <Disclosure.Button
+                <NavLink
                   key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
+                  to={item.href}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-gray-700 text-red-600 flex items-center text-base p-2	"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-base font-medium flex items-center text-center"
+                  }
+                  end
                 >
                   {item.name}
-                </Disclosure.Button>
+                </NavLink>
               ))}
               <div className="group inline-block">
                 <button className="outline-none focus:outline-none bg-gray-800 rounded-sm flex items-center min-w-32 hover:bg-gray-700 hover:text-white flex justify-between p-3">
-                  <span className="pr-1 text-red-700 text-base">Médias</span>
+                  <span className="pr-1 text-gray-300 text-base">Médias</span>
                   <span>
                     <svg
                       className="fill-white h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out"
@@ -157,6 +155,18 @@ export default function Navbar() {
                   </NavLink>
                 </ul>
               </div>
+              <NavLink
+                key={uuid()}
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-gray-700 text-red-600 flex items-center text-base p-2	"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-base font-medium flex items-center text-center"
+                }
+                end
+              >
+                Contact
+              </NavLink>
             </div>
           </Disclosure.Panel>
         </>
