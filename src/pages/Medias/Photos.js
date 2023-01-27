@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Card from "../../components/Card";
 import { getGallery } from "../../utils/fetchPhotos";
 import { useState } from "react";
-import Modal from "../../components/Modal";
+
 
 const Photos = () => {
   const [gallery, setGallery] = useState([]);

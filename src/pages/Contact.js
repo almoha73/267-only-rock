@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Modal from "modalagnes73";
 import { collection, addDoc } from "firebase/firestore";
@@ -18,7 +18,7 @@ export default function Contact() {
       console.log("Document written with ID: ", docRef.id);
       window.scrollTo(0, 0);
       setIsOpen(true);
-	  reset()
+      reset();
     } catch (error) {
       console.log(error);
     }

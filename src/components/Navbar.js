@@ -11,9 +11,9 @@ const navigation = [
   { name: "Evènements", href: "/evenements", current: false },
 ];
 
-function classNames(...classNamees) {
-  return classNamees.filter(Boolean).join(" ");
-}
+// function classNames(...classNamees) {
+//   return classNamees.filter(Boolean).join(" ");
+// }
 
 export default function Navbar() {
   return (
