@@ -153,7 +153,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-medium text-white">
-                    Contactez-moi
+                    Contactez-nous
                   </h3>
                   <p className="mt-6 max-w-3xl text-base text-red-50">
                     Vous nous avez vu en concert ? Vous souhaitez nous embaucher
@@ -199,7 +199,7 @@ export default function Contact() {
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                   <h3 className="sm:text-lg font-medium text-white">
-                    Ou envoyez moi un message !
+                    Ou envoyez nous un message !
                   </h3>
                   <form
                     onSubmit={handleSubmit(onSubmit)}
