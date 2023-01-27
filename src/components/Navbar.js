@@ -3,6 +3,7 @@ import logoWhite from "../assets/logoWhite.svg";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
+import uuid from "react-uuid";
 
 const navigation = [
   { name: "Accueil", href: "/homeboard", current: true },
@@ -14,7 +15,7 @@ function classNames(...classNamees) {
   return classNamees.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-gray-800  md:p-2 w-full fixed z-20">
       {({ open }) => (
@@ -87,6 +88,18 @@ export default function Example() {
                         </NavLink>
                       </ul>
                     </div>
+                    <NavLink
+                      key={uuid()}
+                      to="/contact"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "bg-gray-700 text-white flex items-center text-xl p-2	"
+                          : "text-red-700 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-xl font-medium flex items-center text-center"
+                      }
+                      end
+                    >
+                      Contact
+                    </NavLink>
                   </div>
                 </div>
               </div>

@@ -67,7 +67,7 @@ const Groupe = () => {
               <br />
               Moins de 3 mois après son arrivée, le groupe assure une première
               date pour la fête de la musique à Saint-Denis-de-Pile. 267 assure
-              ensuite des concert privé le même été.
+              ensuite des concert privés le même été.
               <br />
               <br />
               En Février 2017, 267 rentre au Garden Studio de{" "}
