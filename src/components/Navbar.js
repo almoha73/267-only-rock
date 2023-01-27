@@ -72,7 +72,7 @@ export default function Example() {
                           </svg>
                         </span>
                       </button>
-                      <ul className="flex  bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white">
+                      <ul className="flex  bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white flex flex-col">
                         <NavLink
                           to="/photos"
                           className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
