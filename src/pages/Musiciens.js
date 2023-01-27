@@ -37,10 +37,10 @@ const Musiciens = () => {
               <img
                 src={musiciens[3]?.musiciens.photo}
                 alt="Laurent"
-                className="min-w-[300px] sm:max-h-[500px] mx-auto rounded mb-4  object-cover"
+                className="min-w-[300px] sm:max-h-[500px] mx-auto rounded   object-cover "
               />
               <div className="sm:p-4 xl:p-8">
-                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl">
+                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
                   {musiciens[3]?.musiciens.nom}, chant
                 </h2>
                 <p className="text-justify text-white text-base">
@@ -59,11 +59,11 @@ const Musiciens = () => {
               </div>
             </div>
           </article>
-          <article className="w-11/12 mx-auto mt-8 bg-neutral-800 xl:p-4">
+          <article className="w-11/12 mx-auto my-8 bg-neutral-800 p-4">
             <div className="flex flex-col-reverse lg:flex-row">
               <div className="sm:p-4 xl:p-8">
-                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl">
-                  {musiciens[2]?.musiciens.nom}, guitariste
+                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
+                  {musiciens[2]?.musiciens.nom}, guitare
                 </h2>
                 <p className="text-justify text-white text-base">
                   J'ai commencé à jouer de la guitare acoustique à l'âge de 16
@@ -85,7 +85,65 @@ const Musiciens = () => {
               <img
                 src={musiciens[2]?.musiciens.photo}
                 alt="Laurent"
-                className="min-w-[300px] sm:max-h-[500px] mx-auto rounded mb-4 object-cover"
+                className="min-w-[300px] sm:max-h-[500px] mx-auto rounded object-cover "
+              />
+            </div>
+          </article>
+          <article className="w-11/12 mx-auto bg-neutral-800 p-4">
+            <div className="flex flex-col lg:flex-row lg:items-center">
+              <img
+                src={musiciens[1]?.musiciens.photo}
+                alt="Laurent"
+                className="min-w-[300px] sm:max-h-[500px] mx-auto rounded   object-cover"
+              />
+              <div className="sm:p-4 xl:p-8">
+                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
+                  {musiciens[1]?.musiciens.nom}, basse
+                </h2>
+                <p className="text-justify text-white text-base">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                  voluptatem eveniet repellat distinctio ut sunt eos obcaecati.
+                  Eius sapiente reprehenderit error fugiat ullam cumque ipsa
+                  voluptas inventore ratione! Vitae et, repellendus officia
+                  magni vel, libero iusto est quidem ea, architecto quam.
+                  Reiciendis, impedit provident, nostrum mollitia rem quia
+                  fugiat ratione obcaecati dolores eum dolorem porro. Quia,
+                  aliquid quam ratione libero ipsum, sequi, officia natus vitae
+                  deserunt totam in. Facilis hic vero et magni enim? Voluptates
+                  dignissimos, commodi dolores explicabo molestiae repellendus
+                  dolor quam repudiandae. Pariatur illo amet perspiciatis minima
+                  cupiditate ipsum veritatis tempore similique recusandae, et
+                  dolor alias facilis doloremque.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article className="w-11/12 mx-auto my-8 bg-neutral-800 p-4">
+            <div className="flex flex-col-reverse lg:flex-row">
+              <div className="sm:p-4 xl:p-8">
+                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
+                  {musiciens[0]?.musiciens.nom}, batterie
+                </h2>
+                <p className="text-justify text-white text-base">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                  unde sequi aliquid inventore vitae iusto esse eveniet,
+                  mollitia eius vel culpa id doloremque adipisci repellendus
+                  dolor totam facilis repellat error! Sequi asperiores in modi
+                  quo fuga quis numquam fugiat neque, molestias ea mollitia
+                  voluptatum aperiam nobis sint accusamus expedita non eius.
+                  Repudiandae sed laudantium molestias esse debitis numquam
+                  totam aspernatur quasi voluptas fugiat. Voluptate eum dolore
+                  inventore eos ducimus obcaecati similique laborum quis.
+                  Reiciendis totam, quis natus, cupiditate voluptatem facilis
+                  reprehenderit exercitationem consequuntur nulla neque earum
+                  asperiores vitae sapiente cum! Iure, sunt. Consequuntur omnis
+                  odit minima maiores atque dicta voluptatibus?
+                </p>
+              </div>
+              <img
+                src={musiciens[0]?.musiciens.photo}
+                alt="Laurent"
+                className="min-w-[300px] sm:max-h-[500px] mx-auto rounded object-cover"
               />
             </div>
           </article>
