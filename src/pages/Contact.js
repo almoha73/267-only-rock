@@ -34,6 +34,7 @@ export default function Contact() {
           button
           buttonbg="red-500"
           buttonTextColor="neutral-000"
+          buttonbgHover="red-700"
         />
       )}
       <div className="bg-gradient-to-r from-stone-500 to-neutral-800 flex flex-col items-center w-full h-auto lg:h-screen">
@@ -156,8 +157,7 @@ export default function Contact() {
                     Contactez-nous
                   </h3>
                   <p className="mt-6 max-w-3xl text-base text-red-50">
-                    Vous nous avez vu en concert ? Vous souhaitez nous embaucher
-                    pour une soirée ? Laissez-nous un message !
+                    Vous nous avez vu en concert ? Vous souhaitez que l'on fasse une prestation pour vous ? Voici nos coordonnées !
                   </p>
                   <dl className="mt-8 space-y-6">
                     <dt>
@@ -199,7 +199,7 @@ export default function Contact() {
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                   <h3 className="sm:text-lg font-medium text-white">
-                    Ou envoyez nous un message !
+                    Ou envoyez nous un message via ce formulaire !
                   </h3>
                   <form
                     onSubmit={handleSubmit(onSubmit)}
@@ -231,7 +231,7 @@ export default function Contact() {
                       </label>
                       <div className="mt-1">
                         <input
-                          {...register("lastname", { required: true })}
+                          {...register("lastname", { required: false})}
                           type="text"
                           name="lastname"
                           id="lastname"
@@ -249,7 +249,7 @@ export default function Contact() {
                       </label>
                       <div className="mt-1">
                         <input
-                          {...register("email", { required: true })}
+                          {...register("email", { required: false })}
                           id="email"
                           name="email"
                           type="email"
@@ -269,7 +269,7 @@ export default function Contact() {
                       </div>
                       <div className="mt-1">
                         <input
-                          {...register("phone", { required: true })}
+                          {...register("phone", { required: false })}
                           type="text"
                           name="phone"
                           id="phone"
