@@ -7,6 +7,7 @@ import Evenements from "./pages/Evenements";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Spinner from "./components/Spinner";
+// import LogoSvg from "./assets/LogoSvg";
 
 const Home = lazy(() => import("./pages/Home"));
 const Groupe = lazy(() => import("./pages/Groupe"));
@@ -25,6 +26,7 @@ function App() {
           <Route path="/photos" element={<Photos />}></Route>
           <Route path="/videos" element={<Videos />}></Route>
           <Route path="*" element={<Error />}></Route>
+          {/* <Route path="essai" element={<LogoSvg />}></Route> */}
         </Routes>
       </Suspense>
     </div>
