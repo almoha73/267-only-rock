@@ -1,32 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 const Card = ({ gallery }) => {
-  const [open, setOpen] = useState(false);
-  const [img, setImg] = useState("");
-  const [clienty, setClienty] = useState("0px");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  
 
-  const openModal = (e) => {
-    console.log(e.target);
-    console.log(e);
-    setOpen(true);
-    //window.scrollTo(0, 0);
-    setImg(e.target.currentSrc);
-    setClienty(e.clientY);
-    console.log(clienty);
-  };
-
-  const closeModal = (e) => {
-    if (e.target.currentSrc !== img) {
-      setOpen(false);
-      setImg("");
+  const handleImageClick = (image) => {
+    if(window.innerWidth > 650){
+      setSelectedImage(image);
+      setIsModalOpen(true);
     }
+   
   };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = event => {
+      if (event.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isModalOpen]);
+
+
   return (
     <>
-      {open && <Modal img={img} close={closeModal} clienty={clienty} />}
-      <div className="block w-full cursor-pointer" onClick={openModal}>
+      {isModalOpen && (
+        <Modal
+          img={selectedImage}
+          onRequestClose={handleModalClose}
+        />
+      )}
+      <div className="block w-full cursor-pointer">
         <img
+          onClick={() => handleImageClick(gallery)}
           src={gallery}
           alt=""
           className="w-full  sm:w-80 mb-8 rounded-lg shadow-md shadow-white "

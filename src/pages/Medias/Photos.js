@@ -36,7 +36,7 @@ const Photos = () => {
             Gallerie photos
           </h1>
 
-          <div className=" sm:w-10/12 flex justify-center bg-neutral-800 sm:py-16 p-4">
+          <div className=" sm:w-10/12 flex justify-center bg-neutral-800 sm:py-16 p-4 z-10">
             <div className="sm:ml-1/12 sm:columns-2 lg:columns-3 xl:columns-4 sm:gap-8">
               {gallery &&
                 gallery?.map((elt) => (
