@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     gsap.to(bomb, {
-      rotation: 360,
+      rotationY: -360,
       duration: 0.5,
       transformOrigin: "50% 50%",
       ease: "none",
