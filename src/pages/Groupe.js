@@ -22,6 +22,15 @@ const Groupe = () => {
   }, [groupe.length]);
 
   console.log(groupe);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+  }, []);
+
   return (
     <>
       <div
@@ -46,7 +55,14 @@ const Groupe = () => {
             <li>Billy Idol</li>
             <li>...</li>
           </ul>
-          <div className="sm:w-10/12 mx-auto my-8 bg-neutral-800 p-5 sm:p-5 rounded">
+          <div
+            className="sm:w-10/12 mx-auto my-8 bg-neutral-800 p-5 sm:p-5 rounded"
+            style={{
+              transition: "all 0.5s ease-in-out",
+              opacity: isVisible ? 1 : 0,
+              transform: `translateX(${isVisible ? 0 : 60}px)`,
+            }}
+          >
             <img
               src={groupe[0]?.photoGroupe?.photo}
               alt="groupe"
@@ -109,7 +125,6 @@ const Groupe = () => {
               des festivals, bar, salon.
             </p>
           </div>
-          {/* <CarouselGroupe slides={slides} /> */}
         </main>
         <Footer />
       </div>
