@@ -21,12 +21,12 @@ const Home = () => {
         className="w-full h-screen  flex flex-col justify-center items-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <div className="mb-20 max-w-[700px]">
+        <div className="mb-20 max-w-[700px]" style={{ perspective: 500 }}>
           <img
             src={logosansFond}
             ref={(el) => (bomb = el)}
             alt=""
-            className=""
+            style={{ transformStyle: "preserve-3d" }}
           />
         </div>
         <button className="btn-home ">
