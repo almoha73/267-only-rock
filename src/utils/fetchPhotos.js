@@ -24,3 +24,11 @@ export const getGallery = async () => {
     console.log(error);
   }
 };
+
+export const getEvenements = async () => {
+  try {
+    return await getDocs(collection(db, "evenements"));
+  } catch (error) {
+    console.log(error);
+  }
+};
