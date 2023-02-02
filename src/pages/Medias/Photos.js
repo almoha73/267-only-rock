@@ -5,8 +5,8 @@ import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTimes,
-  faArrowLeft,
-  faArrowRight,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { getGallery } from "../../utils/fetchPhotos";
 import { useState } from "react";
@@ -97,7 +97,7 @@ const Photos = () => {
                     onClick={handlePrevious}
                   >
                     <FontAwesomeIcon
-                      icon={faArrowLeft}
+                      icon={faChevronLeft}
                       className="text-white text-4xl"
                     />
                   </button>
@@ -106,7 +106,7 @@ const Photos = () => {
                     onClick={handleNext}
                   >
                     <FontAwesomeIcon
-                      icon={faArrowRight}
+                      icon={faChevronRight}
                       className="text-white text-4xl"
                     />
                   </button>
