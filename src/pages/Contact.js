@@ -37,7 +37,7 @@ export default function Contact() {
           buttonbgHover="red-700"
         />
       )}
-      <div className="bg-gradient-to-r from-stone-500 to-neutral-800 flex flex-col items-center w-full h-auto lg:h-screen">
+      <div className="bg-gradient-to-r from-zinc-500 to-zinc-800 flex flex-col items-center w-full h-auto lg:h-screen">
         <Navbar />
 
         <main className="overflow-hidden sm:mt-32 mt-16">
@@ -52,7 +52,7 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 lg:grid-cols-3 mt-8">
                 {/* Contact information */}
-                <div className="relative overflow-hidden bg-gradient-to-b from-neutral-500 to-neutral-600 py-10 px-6 sm:px-10 xl:p-12">
+                <div className="relative overflow-hidden bg-gradient-to-b from-gray-500 to-gray-600 py-10 px-6 sm:px-10 xl:p-12">
                   {/* Decorative angle backgrounds */}
                   <div
                     className="pointer-events-none absolute inset-0 sm:hidden"
