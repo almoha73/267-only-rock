@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import uuid from 'react-uuid';
-
+import uuid from "react-uuid";
 
 const neon = keyframes`
 0% {
@@ -23,7 +22,7 @@ transition: "opacity 0.5s;
 `;
 
 const flecheOuverte = "<< ";
-const flecheFermee = " >>"
+const flecheFermee = " >>";
 
 const NewEvenement = () => {
   return (
@@ -47,7 +46,7 @@ const NewEvenement = () => {
         <Li key={uuid()}>E</Li>
         <Li key={uuid()}>M</Li>
         <Li key={uuid()}>E</Li>
-        <Li>N</Li>
+        <Li key={uuid()}>N</Li>
         <Li key={uuid()}>T</Li>
         <Li key={uuid()}>&nbsp;{flecheFermee}</Li>
       </ul>
