@@ -14,6 +14,8 @@ const neon = keyframes`
 const LiR = styled.li`
   animation: ${neon} 4s linear infinite;
   transform: rotate(15deg) translateY(4px);
+  text-shadow: 0 0 30px red, 0 0 40px red;
+transition: "opacity 0.5s;
 `;
 
 const Li = styled.li`
@@ -27,7 +29,7 @@ const flecheFermee = " >>";
 const NewEvenement = () => {
   return (
     <a href="/evenements" className="w-full flex justify-center  p-2 mb-4">
-      <ul className=" text-red-500 flex sm:text-4xl font-bold mr-4">
+      <ul className=" text-red-500 flex text-xl sm:text-4xl font-bold mr-4">
         <Li key={uuid()}>{flecheOuverte}&nbsp;</Li>
         <Li key={uuid()}>P</Li>
         <Li key={uuid()}>R</Li>
@@ -38,7 +40,7 @@ const NewEvenement = () => {
         <Li key={uuid()}>I</Li>
         <Li key={uuid()}>N</Li>
       </ul>
-      <ul className=" text-red-500 flex sm:text-4xl font-bold">
+      <ul className=" text-red-500 flex text-xl sm:text-4xl font-bold">
         <Li key={uuid()}>E</Li>
         <Li key={uuid()}>V</Li>
         <LiR key={uuid()}>E</LiR>
