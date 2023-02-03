@@ -5,6 +5,7 @@ import logoWhite from "../assets/logoWhite.svg";
 import logosansFond from "../assets/logosansFond.svg";
 import bg from "../assets/bg_2.jpg";
 import { getPhotoGroupe } from "../utils/fetchPhotos";
+import NewEvenement from "../components/NewEvenement";
 
 const Groupe = () => {
   const [groupe, setGroupe] = useState([]);
@@ -38,14 +39,17 @@ const Groupe = () => {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <Navbar />
-        <main className="flex-1 h-auto  flex  flex-col w-full mt-24 sm:mt-32 ">
-          <div className="w-full flex items-center justify-center mb-8">
-            <span className="w-20 block mr-2">
-              <img src={logosansFond} alt="" className="w-full" />
-            </span>
-            <h1 className="title-group text-red-600 text-4xl text-center">
-              Le groupe
-            </h1>
+        <main className="flex-1 h-auto  flex  flex-col w-full mt-20 sm:mt-28 ">
+          <div className="w-full items-center justify-center mb-8 ">
+            <NewEvenement />
+            <div className="flex justify-center items-center">
+              <span className="w-20 block mr-2">
+                <img src={logosansFond} alt="" className="w-full" />
+              </span>
+              <h1 className="title-group text-red-600 text-4xl text-center">
+                Le groupe
+              </h1>
+            </div>
           </div>
 
           <ul className="flex w-11/12 mx-auto flex-wrap gap-4 text-white text-lg sm:text-2xl  justify-center sm:justify-center  sm:mb-12">
