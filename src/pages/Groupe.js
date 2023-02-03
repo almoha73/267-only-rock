@@ -38,8 +38,8 @@ const Groupe = () => {
         className="w-full h-auto flex flex-col"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <Navbar />
-        <main className="flex-1 h-auto  flex  flex-col w-full mt-20 sm:mt-28 ">
+      <Navbar />
+        <main className="w-full mt-24 xl:mt-32 md:h-auto flex-1 flex items-center flex-col">
           <div className="w-full items-center justify-center mb-8 ">
             <NewEvenement />
             <div className="flex justify-center items-center">
@@ -60,7 +60,7 @@ const Groupe = () => {
             <li>...</li>
           </ul>
           <div
-            className="sm:w-10/12 mx-auto my-8 bg-neutral-800 p-5 sm:p-5 rounded"
+            className="sm:w-10/12 w-full mx-auto my-8 bg-neutral-800 p-5 rounded"
             style={{
               transition: "all 0.5s ease-in-out",
               opacity: isVisible ? 1 : 0,

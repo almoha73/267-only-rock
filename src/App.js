@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 //import Home from "./pages/Home";
 //import Groupe from "./pages/Groupe";
-import Musiciens from "./pages/Musiciens";
-import Evenements from "./pages/Evenements";
-import Contact from "./pages/Contact";
-import Error from "./pages/Error";
+//import Musiciens from "./pages/Musiciens";
+//import Evenements from "./pages/Evenements";
+//import Contact from "./pages/Contact";
+//import Error from "./pages/Error";
 import Spinner from "./components/Spinner";
 // import LogoSvg from "./assets/LogoSvg";
 
@@ -13,6 +13,15 @@ const Home = lazy(() => import("./pages/Home"));
 const Groupe = lazy(() => import("./pages/Groupe"));
 const Photos = lazy(() => import("./pages/Medias/Photos"));
 const Videos = lazy(() => import("./pages/Medias/Videos"));
+const Musiciens = lazy(() => import("./pages/Musiciens"));
+const Evenements = lazy(() => import("./pages/Evenements"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Error = lazy(() => import("./pages/Error"));
+//const Spinner = lazy(() => import("./pages/Musiciens"));
+
+
+
+
 function App() {
   return (
     <div className="App">

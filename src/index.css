@@ -11,9 +11,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-/* body {
-	background-image: url("./assets/bg_2.jpg");
-} */
+body {
+	width: 100%;
+}
 nav,
 .title-group,
 .galleryTitle, .musiciensTitle, .teaserTitle, .evenementTitle {

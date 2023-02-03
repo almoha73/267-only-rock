@@ -28,7 +28,7 @@ const flecheFermee = " >>";
 
 const NewEvenement = () => {
   return (
-    <a href="/evenements" className="w-full flex justify-center  p-2 mb-4">
+    <a href="/evenements" className="block w-full flex justify-center  p-2 mb-4">
       <ul className=" text-red-500 flex text-xl sm:text-4xl font-bold mr-4">
         <Li key={uuid()}>{flecheOuverte}&nbsp;</Li>
         <Li key={uuid()}>P</Li>
