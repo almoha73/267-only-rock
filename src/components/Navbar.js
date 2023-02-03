@@ -22,7 +22,7 @@ export default function Navbar() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className=" flex h-16 items-center justify-between relative">
-              <div className=" inset-y-0 left-0 flex items-center md:hidden">
+              <div className=" inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-red-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -41,7 +41,7 @@ export default function Navbar() {
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden md:ml-28 md:block">
+                <div className="hidden md:ml-28 lg:block">
                   <div className="flex space-x-8 items-center">
                     {navigation.map((item) => (
                       <NavLink
@@ -107,11 +107,11 @@ export default function Navbar() {
             <img
               src={logoWhite}
               alt=""
-              className="hidden absolute w-32 md:block md:left-5 md:top-5"
+              className="hidden absolute w-32 lg:block md:left-5 md:top-5"
             />
           </div>
 
-          <Disclosure.Panel className="md:hidden  ">
+          <Disclosure.Panel className="lg:hidden  ">
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigation.map((item) => (
                 <NavLink

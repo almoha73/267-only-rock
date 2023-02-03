@@ -136,10 +136,10 @@ const Musiciens = () => {
           <article
             ref={ref3}
             style={{ opacity: 0, transform: "translateY(60px)" }}
-            className="w-11/12 mx-auto bg-neutral-800 p-4"
+            className="w-11/12 xl:w-1/2 mx-auto bg-neutral-800 p-4"
           >
             <div className="lg:flex lg:justify-evenly ">
-              <div className="mb-8">
+              <div className="mb-8 sm:mb-0 sm:flex sm:flex-col sm:justify-center sm:items-center">
                 <img
                   src={musiciens[1]?.musiciens.photo}
                   alt="Laurent"
@@ -181,10 +181,10 @@ const Musiciens = () => {
           <article
             ref={ref4}
             style={{ opacity: 0, transform: "translateY(60px)" }}
-            className="w-11/12 mx-auto my-8 bg-neutral-800 p-4"
+            className="w-11/12 xl:w-1/2 mx-auto my-8 bg-neutral-800 p-4"
           >
             <div className="lg:flex lg:justify-evenly ">
-              <div>
+              <div className="mb-8 sm:mb-0 sm:flex sm:flex-col sm:justify-center sm:items-center">
                 <img
                   src={musiciens[0]?.musiciens.photo}
                   alt="Laurent"
