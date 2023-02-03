@@ -84,6 +84,7 @@ const Photos = () => {
                 gallery.map((image, i) => (
                   <img
                     key={i}
+                    id={image.key}
                     src={image.gallery.photo}
                     alt={image.alt}
                     className="w-full  sm:w-80 mb-8 rounded-lg shadow-md shadow-white cursor-pointer"

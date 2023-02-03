@@ -4,18 +4,16 @@ import Footer from "../components/Footer";
 import { useEffect } from "react";
 import { getMusiciens } from "../utils/fetchPhotos";
 import bg from "../assets/bg_2.jpg";
-import { gsap } from 'gsap';
-
+import { gsap } from "gsap";
 
 const animateElement = (element) => {
   gsap.to(element, {
     duration: 1,
     y: 0,
     opacity: 1,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
   });
 };
-
 
 const Musiciens = () => {
   const [musiciens, setMusiciens] = useState([]);
@@ -34,34 +32,30 @@ const Musiciens = () => {
 
   console.log(musiciens);
 
-// animation
-const ref1 = useRef(null);
-const ref2 = useRef(null);
-const ref3 = useRef(null);
-const ref4 = useRef(null);
-useEffect(() => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateElement(entry.target);
-        observer.unobserve(entry.target);
-      }
+  // animation
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateElement(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
     });
-  });
-  
-  observer.observe(ref1.current);
-  observer.observe(ref2.current);
-  observer.observe(ref3.current);
-  observer.observe(ref4.current);
-  
-  return () => {
-    observer.disconnect();
-  };
-}, []);
 
+    observer.observe(ref1.current);
+    observer.observe(ref2.current);
+    observer.observe(ref3.current);
+    observer.observe(ref4.current);
 
-
-
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div
@@ -74,7 +68,11 @@ useEffect(() => {
           Les musiciens
         </h1>
         <div className=" sm:w-11/12 py-8">
-          <article ref={ref1} style={{ opacity: 0, transform: 'translateY(60px)' }} className="w-11/12 mx-auto bg-neutral-800 p-4">
+          <article
+            ref={ref1}
+            style={{ opacity: 0, transform: "translateY(60px)" }}
+            className="w-11/12 mx-auto bg-neutral-800 p-4"
+          >
             <div className="flex flex-col lg:flex-row lg:items-center">
               <img
                 src={musiciens[3]?.musiciens.photo}
@@ -101,7 +99,11 @@ useEffect(() => {
               </div>
             </div>
           </article>
-          <article ref={ref2} style={{ opacity: 0, transform: 'translateY(60px)' }} className="w-11/12 mx-auto my-8 bg-neutral-800 p-4">
+          <article
+            ref={ref2}
+            style={{ opacity: 0, transform: "translateY(60px)" }}
+            className="w-11/12 mx-auto my-8 bg-neutral-800 p-4"
+          >
             <div className="flex flex-col-reverse lg:flex-row">
               <div className="sm:p-4 xl:p-8">
                 <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
@@ -131,8 +133,34 @@ useEffect(() => {
               />
             </div>
           </article>
-          <article ref={ref3} style={{ opacity: 0, transform: 'translateY(60px)' }} className="w-11/12 mx-auto bg-neutral-800 p-4">
-            <div className="flex flex-col lg:flex-row lg:items-center">
+          <article
+            ref={ref3}
+            style={{ opacity: 0, transform: "translateY(60px)" }}
+            className="w-11/12 mx-auto bg-neutral-800 p-4"
+          >
+            <div className="lg:flex lg:justify-evenly ">
+              <div className="mb-8">
+                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
+                  {musiciens[1]?.musiciens.nom}, basse
+                </h2>
+                <img
+                  src={musiciens[1]?.musiciens.photo}
+                  alt="Laurent"
+                  className="w-[300px] sm:min-w-[300px] sm:max-h-[500px] mx-auto rounded   object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
+                  {musiciens[0]?.musiciens.nom}, batterie
+                </h2>
+                <img
+                  src={musiciens[0]?.musiciens.photo}
+                  alt="Laurent"
+                  className="w-[300px] sm:min-w-[300px] sm:max-h-[500px] mx-auto rounded object-cover"
+                />
+              </div>
+            </div>
+            {/* <div className="flex flex-col lg:flex-row lg:items-center">
               <img
                 src={musiciens[1]?.musiciens.photo}
                 alt="Laurent"
@@ -158,10 +186,14 @@ useEffect(() => {
                   dolor alias facilis doloremque.
                 </p>
               </div>
-            </div>
+            </div> */}
           </article>
-          <article ref={ref4} style={{ opacity: 0, transform: 'translateY(60px)' }} className="w-11/12 mx-auto my-8 bg-neutral-800 p-4">
-            <div className="flex flex-col-reverse lg:flex-row">
+          <article
+            ref={ref4}
+            style={{ opacity: 0, transform: "translateY(60px)" }}
+            className="w-11/12 mx-auto my-8 bg-transparent p-4"
+          >
+            {/* <div className="flex flex-col-reverse lg:flex-row">
               <div className="sm:p-4 xl:p-8">
                 <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
                   {musiciens[0]?.musiciens.nom}, batterie
@@ -187,7 +219,7 @@ useEffect(() => {
                 alt="Laurent"
                 className="w-[300px] sm:min-w-[300px] sm:max-h-[500px] mx-auto rounded object-cover"
               />
-            </div>
+            </div> */}
           </article>
         </div>
       </main>
