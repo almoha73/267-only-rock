@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import uuid from 'react-uuid';
+
 
 const neon = keyframes`
 0% {
@@ -27,27 +29,27 @@ const NewEvenement = () => {
   return (
     <a href="/evenements" className="w-full flex justify-center  p-2 mb-4">
       <ul className=" text-red-500 flex sm:text-4xl font-bold mr-4">
-        <Li>{flecheOuverte}&nbsp;</Li>
-        <Li>P</Li>
-        <Li>R</Li>
-        <LiR>O</LiR>
-        <Li>C</Li>
-        <Li>H</Li>
-        <Li>A</Li>
-        <Li>I</Li>
-        <Li>N</Li>
+        <Li key={uuid()}>{flecheOuverte}&nbsp;</Li>
+        <Li key={uuid()}>P</Li>
+        <Li key={uuid()}>R</Li>
+        <LiR key={uuid()}>O</LiR>
+        <Li key={uuid()}>C</Li>
+        <Li key={uuid()}>H</Li>
+        <Li key={uuid()}>A</Li>
+        <Li key={uuid()}>I</Li>
+        <Li key={uuid()}>N</Li>
       </ul>
       <ul className=" text-red-500 flex sm:text-4xl font-bold">
-        <Li>E</Li>
-        <Li>V</Li>
-        <LiR>E</LiR>
+        <Li key={uuid()}>E</Li>
+        <Li key={uuid()}>V</Li>
+        <LiR key={uuid()}>E</LiR>
+        <Li key={uuid()}>N</Li>
+        <Li key={uuid()}>E</Li>
+        <Li key={uuid()}>M</Li>
+        <Li key={uuid()}>E</Li>
         <Li>N</Li>
-        <Li>E</Li>
-        <Li>M</Li>
-        <Li>E</Li>
-        <Li>N</Li>
-        <Li>T</Li>
-        <Li>&nbsp;{flecheFermee}</Li>
+        <Li key={uuid()}>T</Li>
+        <Li key={uuid()}>&nbsp;{flecheFermee}</Li>
       </ul>
     </a>
   );
