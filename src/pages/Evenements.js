@@ -31,7 +31,7 @@ const Evenements = () => {
           <h1 className="evenementTitle text-4xl text-red-600 underline mb-12">Evènements</h1>
           <div className="h-auto mb-20">
             {evenements.map((elt) => (
-              <img src={elt.evenement.href} alt="evenement" className="w-11/12 mx-auto max-h-[600px] rounded-lg shadow-md shadow-white"/>
+              <img src={elt.evenement.href} key={elt.key} alt="evenement" className="w-11/12 mx-auto max-h-[600px] rounded-lg shadow-md shadow-white"/>
             ))}
           </div>
         </main>
