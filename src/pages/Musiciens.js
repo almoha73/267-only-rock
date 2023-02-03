@@ -128,7 +128,7 @@ const Musiciens = () => {
               </div>
               <img
                 src={musiciens[2]?.musiciens.photo}
-                alt="Laurent"
+                alt="Patrick"
                 className="w-[300px] sm:min-w-[300px] sm:max-h-[500px] mx-auto rounded object-cover "
               />
             </div>
@@ -140,24 +140,14 @@ const Musiciens = () => {
           >
             <div className="lg:flex lg:justify-evenly ">
               <div className="mb-8">
-                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
-                  {musiciens[1]?.musiciens.nom}, basse
-                </h2>
                 <img
                   src={musiciens[1]?.musiciens.photo}
                   alt="Laurent"
                   className="w-[300px] sm:min-w-[300px] sm:max-h-[500px] mx-auto rounded   object-cover"
                 />
-              </div>
-              <div>
                 <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
-                  {musiciens[0]?.musiciens.nom}, batterie
+                  {musiciens[1]?.musiciens.nom}, basse
                 </h2>
-                <img
-                  src={musiciens[0]?.musiciens.photo}
-                  alt="Laurent"
-                  className="w-[300px] sm:min-w-[300px] sm:max-h-[500px] mx-auto rounded object-cover"
-                />
               </div>
             </div>
             {/* <div className="flex flex-col lg:flex-row lg:items-center">
@@ -191,8 +181,20 @@ const Musiciens = () => {
           <article
             ref={ref4}
             style={{ opacity: 0, transform: "translateY(60px)" }}
-            className="w-11/12 mx-auto my-8 bg-transparent p-4"
+            className="w-11/12 mx-auto my-8 bg-neutral-800 p-4"
           >
+            <div className="lg:flex lg:justify-evenly ">
+              <div>
+                <img
+                  src={musiciens[0]?.musiciens.photo}
+                  alt="Laurent"
+                  className="w-[300px] sm:min-w-[300px] sm:max-h-[500px] mx-auto rounded object-cover"
+                />
+                <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
+                  {musiciens[0]?.musiciens.nom}, batterie
+                </h2>
+              </div>
+            </div>
             {/* <div className="flex flex-col-reverse lg:flex-row">
               <div className="sm:p-4 xl:p-8">
                 <h2 className="text-white text-xl mb-4 text-center lg:text-2xl mt-4">
