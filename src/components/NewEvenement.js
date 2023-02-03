@@ -12,7 +12,7 @@ const neon = keyframes`
 `;
 
 const LiR = styled.li`
-  animation: ${neon} 4s linear infinite;
+  animation: ${neon} 1.5s linear infinite;
   transform: rotate(15deg) translateY(4px);
   text-shadow: 0 0 30px red, 0 0 40px red;
 transition: "opacity 0.5s;
