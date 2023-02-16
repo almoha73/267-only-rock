@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { getGallery } from "../../utils/fetchPhotos";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Photos = () => {
   const [gallery, setGallery] = useState([]);
@@ -82,12 +84,13 @@ const Photos = () => {
             <div className="sm:ml-1/12 sm:columns-2 lg:columns-3 xl:columns-4 sm:gap-8">
               {gallery &&
                 gallery.map((image, i) => (
-                  <img
+                  <LazyLoadImage
                     key={i}
                     id={image.key}
                     src={image.gallery.photo}
                     alt={image.alt}
                     className="w-full  sm:w-80 mb-8 rounded-lg shadow-md shadow-white cursor-pointer"
+                    effect="blur"
                     onClick={() => handleClick(i)}
                   />
                 ))}
