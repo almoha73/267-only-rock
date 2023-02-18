@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-import logosansFond from "../assets/logosansFond.svg";
-import bg from "../assets/bg_2.jpg";
+import logo from "../assets/267_sans_fond.png";
+import bg from "../assets/bg_2.jpg"
 
 const Home = () => {
   let bomb = useRef(null);
@@ -21,12 +21,13 @@ const Home = () => {
         className="w-full h-screen  flex flex-col justify-center items-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <div className="mb-20 max-w-[700px]" style={{ perspective: 500 }}>
+        <div className="mb-20 max-w-[700px] " style={{ perspective: 500 }}>
           <img
-            src={logosansFond}
+            src={logo}
             ref={(el) => (bomb = el)}
             alt=""
-            style={{ transformStyle: "preserve-3d" }}
+            style={{ transformStyle: "preserve-3d", objectPosition: "" }}
+            className=""
           />
         </div>
         <button className="btn-home ">
