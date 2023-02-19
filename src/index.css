@@ -20,7 +20,7 @@ nav,
 	font-family: "Anton", sans-serif;
 }
 
-.btn-home a:hover {
+.btn-home a:hover, .btn-error a:hover {
 	color: #ffff;
 	background: #C70F0D;
 	box-shadow: 0 0 50px #C70F0D;

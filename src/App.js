@@ -16,7 +16,7 @@ const Videos = lazy(() => import("./pages/Medias/Videos"));
 const Musiciens = lazy(() => import("./pages/Musiciens"));
 const Evenements = lazy(() => import("./pages/Evenements"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Error = lazy(() => import("./pages/Error"));
+const Error = lazy(() => import("./pages/Error/Error"));
 //const Spinner = lazy(() => import("./pages/Musiciens"));
 
 

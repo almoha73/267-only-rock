@@ -75,7 +75,7 @@ const Photos = () => {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <Navbar />
-        <main className="flex-1 w-full flex flex-col items-center justify-center sm:mt-40 mt-32 overflow-hidden">
+        <main className="flex-1 w-full flex flex-col items-center justify-center sm:mt-34 mt-32 overflow-hidden">
           <h1 className="galleryTitle text-4xl text-red-600 underline mb-12">
             Gallerie photos
           </h1>
