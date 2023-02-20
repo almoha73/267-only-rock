@@ -13,9 +13,13 @@
     .neon-title{
       font-size: 3rem;
     }
-    .neon-title2, .neon-title3{
+    .neon-title3{
       font-size: 1.25rem;
       width: 87%;
+    }
+    .neon-title2{
+      font-size: 1.25rem;
+      width: 86%;
     }
   }
   .neon-box:before, .neon-box:after {
@@ -24,7 +28,8 @@
     top: 0;
     left: 0;
   }
-  
+  font-size: 1.25rem;
+      width: 8%;
   .neon-box:before {
     color: #ff0000;
     text-shadow: 0 0 5px #ff0000;
