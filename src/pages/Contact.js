@@ -13,7 +13,14 @@ export default function Contact() {
   // const onSubmit = (data) => console.log(data);
   const onSubmit = async (data) => {
     console.log(data);
+    // Obtenir la date actuelle
+     // Obtenir la date actuelle en secondes
+  const currentDateInSeconds = Math.floor(Date.now() / 1000);
     try {
+      // Ajouter la propriété "date" avec la date actuelle en secondes à l'objet "data"
+      data.date = currentDateInSeconds;
+      data.notified = false
+      // Envoyer les données sur Firebase
       const docRef = await addDoc(collection(db, "messages"), data);
       console.log("Document written with ID: ", docRef.id);
       window.scrollTo(0, 0);
@@ -157,7 +164,8 @@ export default function Contact() {
                     Contactez-nous
                   </h3>
                   <p className="mt-6 max-w-3xl text-base text-red-50">
-                    Vous nous avez vu en concert ? Vous souhaitez que l'on fasse une prestation pour vous ? Voici nos coordonnées !
+                    Vous nous avez vu en concert ? Vous souhaitez que l'on fasse
+                    une prestation pour vous ? Voici nos coordonnées !
                   </p>
                   <dl className="mt-8 space-y-6">
                     <dt>
@@ -231,7 +239,7 @@ export default function Contact() {
                       </label>
                       <div className="mt-1">
                         <input
-                          {...register("lastname", { required: false})}
+                          {...register("lastname", { required: false })}
                           type="text"
                           name="lastname"
                           id="lastname"
