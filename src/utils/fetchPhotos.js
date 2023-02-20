@@ -32,3 +32,13 @@ export const getEvenements = async () => {
     console.log(error);
   }
 };
+
+export const getAudios = async () => {
+  try {
+    return await getDocs(collection(db, "audios"));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+

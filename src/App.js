@@ -13,6 +13,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Groupe = lazy(() => import("./pages/Groupe"));
 const Photos = lazy(() => import("./pages/Medias/Photos"));
 const Videos = lazy(() => import("./pages/Medias/Videos"));
+const Audios = lazy(() => import("./pages/Medias/Audios"));
 const Musiciens = lazy(() => import("./pages/Musiciens"));
 const Evenements = lazy(() => import("./pages/Evenements"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -34,6 +35,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/photos" element={<Photos />}></Route>
           <Route path="/videos" element={<Videos />}></Route>
+          <Route path="/audios" element={<Audios />}></Route>
           <Route path="*" element={<Error />}></Route>
           {/* <Route path="essai" element={<LogoSvg />}></Route> */}
         </Routes>

@@ -4,16 +4,13 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 import uuid from "react-uuid";
+import MyListbox from "./ListboxMedias";
 
 const navigation = [
   { name: "Accueil", href: "/homeboard", current: true },
   { name: "Les musiciens", href: "/musiciens", current: false },
   { name: "Evènements", href: "/evenements", current: false },
 ];
-
-// function classNames(...classNamees) {
-//   return classNamees.filter(Boolean).join(" ");
-// }
 
 export default function Navbar() {
   return (
@@ -49,8 +46,8 @@ export default function Navbar() {
                         to={item.href}
                         className={({ isActive }) =>
                           isActive
-                            ? "bg-gray-700 text-white flex items-center text-xl p-2	"
-                            : "text-red-700 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-xl font-medium flex items-center text-center"
+                            ? "bg-gray-700 text-white flex items-center lg:text-xl p-2	"
+                            : "text-red-700 hover:bg-gray-700 hover:text-white block p-2 rounded-md lg:text-xl font-medium flex items-center text-center"
                         }
                         aria-current={item.current ? "page" : undefined}
                         end
@@ -58,36 +55,8 @@ export default function Navbar() {
                         {item.name}
                       </NavLink>
                     ))}
-                    <div className="group inline-block">
-                      <button className="outline-none focus:outline-none bg-gray-800 rounded-sm flex items-center min-w-32 hover:bg-gray-700 hover:text-white">
-                        <span className="pr-1 text-red-700 text-xl flex-1">
-                          Médias
-                        </span>
-                        <span>
-                          <svg
-                            className="fill-red-500 h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                          </svg>
-                        </span>
-                      </button>
-                      <ul className="flex  bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white flex flex-col">
-                        <NavLink
-                          to="/photos"
-                          className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
-                        >
-                          Photos
-                        </NavLink>
-                        <NavLink
-                          to="/videos"
-                          className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
-                        >
-                          Vidéos
-                        </NavLink>
-                      </ul>
-                    </div>
+                    <MyListbox />
+
                     <NavLink
                       key={uuid()}
                       to="/contact"
@@ -119,49 +88,23 @@ export default function Navbar() {
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-gray-700 text-red-600 flex items-center text-base p-2	"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-base font-medium flex items-center text-center"
+                      ? "bg-gray-700 text-gray-300 flex items-center text-base p-2	rounded-lg shadow-lg"
+                      : " text-red-600 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-base font-medium flex items-center text-center"
                   }
                   end
                 >
                   {item.name}
                 </NavLink>
               ))}
-              <div className="group inline-block">
-                <button className="outline-none focus:outline-none bg-gray-800 rounded-sm flex items-center min-w-32 hover:bg-gray-700 hover:text-white flex justify-between p-3">
-                  <span className="pr-1 text-gray-300 text-base">Médias</span>
-                  <span>
-                    <svg
-                      className="fill-white h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </span>
-                </button>
-                <ul className="bg-gray-500 border border-red-700 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 text-white flex flex-col">
-                  <NavLink
-                    to="/photos"
-                    className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
-                  >
-                    Photos
-                  </NavLink>
-                  <NavLink
-                    to="/videos"
-                    className="rounded-sm px-3 py-1 hover:bg-gray-100 hover:text-red-700"
-                  >
-                    Vidéos
-                  </NavLink>
-                </ul>
-              </div>
+              <MyListbox />
+           
               <NavLink
                 key={uuid()}
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-gray-700 text-red-600 flex items-center text-base p-2	"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-base font-medium flex items-center text-center"
+                    ? "bg-gray-700 text-gray-300 flex items-center text-base p-2	"
+                    : " text-red-600 hover:bg-gray-700 hover:text-white block p-2 rounded-md text-base font-medium flex items-center text-center"
                 }
                 end
               >
