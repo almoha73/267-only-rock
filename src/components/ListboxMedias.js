@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Listbox } from "@headlessui/react";
+import { useState, Fragment } from "react";
+import { Listbox, Transition } from "@headlessui/react";
 import { useLocation } from "react-router-dom";
 import uuid from "react-uuid";
 
@@ -44,21 +44,29 @@ export default function MyListbox() {
             </svg>
           </span>
         </Listbox.Button>
-        <Listbox.Options className="absolute w-24 py-1 mt-1 bg-gray-800 text-red-600 rounded-lg shadow-lg text-left pl-1">
-          {menuOptions.map((person) => (
-            <Listbox.Option
-              key={person.id}
-              value={person}
-              disabled={person.unavailable}
-              onClick={() => (window.location.href = person.href)}
-              className={`p-1 cursor-pointer hover:bg-gray-600 ${
-                person.active ? "bg-gray-200" : ""
-              }`}
-            >
-              {person.name}
-            </Listbox.Option>
-          ))}
-        </Listbox.Options>
+        <Transition
+          show={open}
+          as={Fragment}
+          leave="transition ease-in duration-100"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Listbox.Options className="absolute w-24 py-1 mt-1 bg-gray-800 text-red-600 rounded-lg shadow-lg text-left pl-1">
+            {menuOptions.map((person) => (
+              <Listbox.Option
+                key={person.id}
+                value={person}
+                disabled={person.unavailable}
+                onClick={() => (window.location.href = person.href)}
+                className={`p-1 cursor-pointer hover:bg-gray-600 ${
+                  person.active ? "bg-gray-200" : ""
+                }`}
+              >
+                {person.name}
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        </Transition>
       </div>
     </Listbox>
   );
