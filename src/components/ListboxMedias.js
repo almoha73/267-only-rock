@@ -1,4 +1,4 @@
-import { useState, Fragment } from "react";
+import { useState, useEffect, Fragment, useRef } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { useLocation } from "react-router-dom";
 import uuid from "react-uuid";
@@ -15,6 +15,8 @@ export default function MyListbox() {
     menuOptions.find((p) => p.active) || menuOptions[0]
   );
   const [open, setOpen] = useState(false);
+  const ref = useRef(null); // référence à l'élément racine du composant
+
   // Mettre à jour les options avec la propriété active en fonction de l'URL courante
   menuOptions.forEach((p) => {
     p.active = location.pathname === p.href;
@@ -23,7 +25,22 @@ export default function MyListbox() {
   const activeOptions = menuOptions.filter((p) => p.active);
   const isActive = activeOptions.length > 0;
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
+
   return (
+    <div ref={ref}>
     <Listbox value={selectedPerson} onChange={setSelectedPerson}>
       <div className="relative">
         <Listbox.Button
@@ -69,5 +86,6 @@ export default function MyListbox() {
         </Transition>
       </div>
     </Listbox>
+    </div>
   );
 }
