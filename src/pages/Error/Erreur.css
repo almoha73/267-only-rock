@@ -1,0 +1,90 @@
+
+html,body{
+  height:100vh
+}
+#root {
+  background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)  center no-repeat;
+  background-size:cover;
+  
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+  /* text-align: center; */
+  width: 75%;
+  height: auto;
+ 
+   user-select: none;
+}
+
+.logo b{
+  font-size: 5vh;
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+  animation: blink linear infinite 2s;
+}
+
+.logo b span:nth-of-type(1){
+  font-size: 8vh;
+  display: block;
+  text-align: center;
+}
+.logo b span:nth-of-type(2){
+    display: block;
+    font-size: 5vh;
+    text-align: center;
+  }
+  .logo b span:nth-of-type(3){
+    display: block;
+    font-size: 5vh;
+    text-align: center;
+  }
+
+@media screen and (max-width: 1100px) {
+    .logo b span:nth-of-type(1){
+        font-size: 6vh;
+        
+      }
+      .logo b span:nth-of-type(2){
+        font-size: 3vh;
+        text-align: center;
+      }
+      .logo b span:nth-of-type(3){
+        font-size: 3vh;
+        text-align: center;
+      }
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+      }
+      20% {
+        opacity: 0.1;
+      }
+      25% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      75% {
+        opacity: 0.7;
+      }
+      80% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 1;
+      }
+}
+
+

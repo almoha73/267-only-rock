@@ -17,7 +17,8 @@ const Audios = lazy(() => import("./pages/Medias/Audios"));
 const Musiciens = lazy(() => import("./pages/Musiciens"));
 const Evenements = lazy(() => import("./pages/Evenements"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Error = lazy(() => import("./pages/Error/Error"));
+//const Error = lazy(() => import("./pages/Error/Error"));
+const Erreur = lazy(() => import("./pages/Error/Erreur"));
 //const Spinner = lazy(() => import("./pages/Musiciens"));
 
 
@@ -36,7 +37,8 @@ function App() {
           <Route path="/photos" element={<Photos />}></Route>
           <Route path="/videos" element={<Videos />}></Route>
           <Route path="/audios" element={<Audios />}></Route>
-          <Route path="*" element={<Error />}></Route>
+          {/* <Route path="*" element={<Error />}></Route> */}
+          <Route path="*" element={<Erreur />}></Route>
           {/* <Route path="essai" element={<LogoSvg />}></Route> */}
         </Routes>
       </Suspense>
