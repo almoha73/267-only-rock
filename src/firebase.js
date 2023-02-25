@@ -3,18 +3,19 @@ import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 import { getFirestore } from "@firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyAOSdNzFlWq_e-UtQ6BGBqRtVSBhX-AlrA",
-	authDomain: "only-rock-2c114.firebaseapp.com",
-	projectId: "only-rock-2c114",
-	storageBucket: "only-rock-2c114.appspot.com",
-	messagingSenderId: "182813702616",
-	appId: "1:182813702616:web:ec7e9252b59ce350bbdaad",
-	measurementId: "G-7HRTNLEVCL"
+	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+	authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+	projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+	storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+	appId: process.env.REACT_APP_FIREBASE_APP_ID,
+	measurementId: process.env.REACT_APP_FIREBASE_MESUREMENT_ID
   };
 
 // Initialize Firebase

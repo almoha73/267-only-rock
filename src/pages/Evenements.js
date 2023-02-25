@@ -5,7 +5,7 @@ import bg from "../assets/bg_2.jpg";
 
 const Evenements = () => {
   const [evenements, setEvenements] = useState([]);
-
+  
   useEffect(() => {
     const loadData = async () => {
       const result2 = [];
@@ -15,6 +15,7 @@ const Evenements = () => {
         
       );
       result2.sort((a, b) => a.evenement.date.toDate().getTime() - b.evenement.date.toDate().getTime());
+      
       setEvenements(result2);
     };
     loadData();
