@@ -86,15 +86,14 @@ const Musiciens = () => {
                 <p className="text-justify text-white text-base">
                   Tessiture Baryton Né à Bordeaux. <br /> Dès l'adolescence le
                   rock est entré dans ma vie. Mes influences sont orientées
-                  Métal, Hard rock, rock. Une entrée dans la musique comme
-                  guitariste après 4 ans passé à la rock School Barbey, j'ai
-                  ensuite intégré le groupe BLAM en 1999, style rock, morceaux
-                  majoritairement fait de composition. <br /> J'ai ensuite
-                  débuté le chant en 2011 et intégré le groupe Amproad , style
-                  rock,Hard rock basé sur des reprises des grands classique
-                  (metallica, radiohead) et quelques compositions. <br />{" "}
-                  Désormais chanteur du groupe 267 dans un style rock bien
-                  pêchus et ce depuis 2015.
+                  Métal, Hard Rock et Rock. J'ai passé 4 ans à la rock School
+                  Barbey, ce qui m'a permis d'intégrer le groupe BLAM en 1999,
+                  style Rock, avec des morceaux majoritairement faits de
+                  compositions. <br /> J'ai ensuite débuté le chant en 2011 et
+                  intégré le groupe Amproad , style Rock, Hard rock basé sur des
+                  reprises des grands classiques (metallica, radiohead ...) et
+                  quelques compositions. <br /> Désormais chanteur du groupe 267
+                  dans un style Rock bien pêchu et ce depuis 2015.
                 </p>
               </div>
             </div>
