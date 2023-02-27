@@ -35,7 +35,7 @@ const Groupe = () => {
   return (
     <>
       <div
-        className="w-screen h-auto lg:h-screen xl:h-auto flex flex-col overflow-hidden"
+        className="w-screen h-auto md:min-h-[1024px] lg:min-h-[1366px] xl:h-auto flex flex-col"
         style={{ backgroundImage: `url(${bg})` }}
       >
       <Navbar />

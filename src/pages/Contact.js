@@ -44,7 +44,7 @@ export default function Contact() {
           buttonbgHover="red-700"
         />
       )}
-      <div className="bg-gradient-to-r from-zinc-500 to-zinc-800 flex flex-col items-center w-full h-auto lg:h-screen">
+      <div className="bg-gradient-to-r from-zinc-500 to-zinc-800 flex flex-col items-center w-full h-auto lg:min-h-[1366px]">
         <Navbar />
 
         <main className="overflow-hidden sm:mt-32 mt-16">

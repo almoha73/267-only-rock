@@ -10,8 +10,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 const firebaseConfig = {
 	apiKey: "AIzaSyAOSdNzFlWq_e-UtQ6BGBqRtVSBhX-AlrA",
-	authDomain: "AIzaSyAOSdNzFlWq_e-UtQ6BGBqRtVSBhX-AlrA"
-	,
+	authDomain: "AIzaSyAOSdNzFlWq_e-UtQ6BGBqRtVSBhX-AlrA",
 	projectId: "only-rock-2c114",
 	storageBucket: "only-rock-2c114.appspot.com",
 	messagingSenderId: "182813702616",

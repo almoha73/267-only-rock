@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import logo from "../assets/267_sans_fond.png";
-import bg from "../assets/bg_2.jpg"
+import bg from "../assets/bg_2.jpg";
 
 const Home = () => {
   let bomb = useRef(null);
@@ -18,26 +18,32 @@ const Home = () => {
   return (
     <>
       <div
-        className="w-full h-screen  flex flex-col justify-center items-center"
+        className="w-screen h-screen  flex justify-center items-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <div className="mb-20 max-w-[700px] " style={{ perspective: 500 }}>
-          <img
-            src={logo}
-            ref={(el) => (bomb = el)}
-            alt=""
-            style={{ transformStyle: "preserve-3d", objectPosition: "" }}
-            className=""
-          />
-        </div>
-        <button className="btn-home ">
+        <main
+          className="w-full  space-y-16 md:space-y-8 flex-1 flex items-center justify-between flex-col"
+          style={{ perspective: 500 }}
+        >
+          <div className="w-10/12 md:w-6/12 lg:w-6/12 xl:w-4/12">
+            <img
+              src={logo}
+              ref={(el) => (bomb = el)}
+              alt=""
+              style={{ transformStyle: "preserve-3d", objectPosition: "" }}
+              className="w-full"
+            />
+          </div>
+          <button className="btn-home ">
           <a
             href="/homeboard"
-            className="border-solid	border-2 border-red-500 text-white text-3xl tracking-widest bg-transparent p-3 rounded-lg "
+            className="border-solid	border-2 border-red-500 text-white md:text-3xl tracking-widest bg-transparent p-3 rounded-lg "
           >
             ENTRÉE
           </a>
         </button>
+        </main>
+        
       </div>
     </>
   );

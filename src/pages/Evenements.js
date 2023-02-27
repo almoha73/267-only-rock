@@ -26,7 +26,7 @@ const Evenements = () => {
   return (
     <>
       <div
-        className="w-full h-auto sm:h-auto flex flex-col lg:h-screen"
+        className="w-full h-auto sm:h-auto flex flex-col md:min-h-[1024px] lg:min-h-[1366px]"
         style={{ backgroundImage: `url(${bg})` }}
       >
         <Navbar />
